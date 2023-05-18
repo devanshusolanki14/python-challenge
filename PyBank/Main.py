@@ -1,12 +1,9 @@
-# Import dependecies
 from calendar import different_locale
 import os
 import csv
 
-# Csv path
 budget_info = os.path.join("PyBank","Resources","budget_data.csv")
 
-# Define variables
 total_months = []
 total_profits = []
 difference = []
@@ -15,7 +12,6 @@ profits = 0
 initial_profit = 0
 count = 0
 
-# Analyze data from CSV file
 with open(budget_info) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=",")
     csv_header = next(csv_reader)
