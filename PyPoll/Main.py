@@ -32,10 +32,10 @@ with open(pypoll_info) as csv_file:
             candidates.append(row[2])
             candidate_votes[row[2]] = 1
         else:
-            candidate_votes[row[2]] += 1
+            candidate_votes[row[2]] = 1
 
 for candidate in candidates:
-    total_votes = candidate_votes[candidate]
+    total_votes = candidate_votes[candidates]
     voting_percent.append(round(float(total_votes) / float(each_vote) * 100,2))
 
     voter_value.append(round(int(total_votes), 0))
